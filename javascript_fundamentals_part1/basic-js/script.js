@@ -80,6 +80,21 @@ module.exports = {
     }
   },
 
+  letterCount: function(string){
+   var output = {};
+
+   function toObject(arr){
+      for (var i = 0; i < arr.length; ++i){
+          if(output[arr[i]] === undefined){
+            output[arr[i]] = "|";
+          }else{
+            output[arr[i]] += "|";
+          }
+      }
+    }
+    toObject(string);
+    return(output);
+},
 
 
   prefixNotation: function(operator, num1, num2, num3){
@@ -87,6 +102,4 @@ module.exports = {
   return eval((num1 + operator + num2 + operator + num3).toString());
 
   }
-
-
 };

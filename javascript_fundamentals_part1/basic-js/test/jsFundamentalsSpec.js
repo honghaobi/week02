@@ -93,8 +93,16 @@ describe("#federalIncomeTaxCalculator", function(){
   });
 });
 
+describe("#letterCount", function(){
+  it("returns the letter count", function(){
+    expect(methods.letterCount("yomama")).to.deep.equal({ a: "||", m: "||", o: "|", y: "|" });
+  });
+  it("returns the letter count", function(){
+    expect(methods.letterCount("banana")).to.deep.equal({ a: "|||", b: "|", n: "||"});
+  });
+});
 
-describe("#prefixNotation", function(){
+describe("#letterCount", function(){
   it("returns the answer", function(){
     expect(methods.prefixNotation("*",9,3,3)).to.equal(81);
   });
