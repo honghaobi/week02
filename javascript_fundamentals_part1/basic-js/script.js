@@ -78,5 +78,15 @@ module.exports = {
     } else if (income >= 413200){
       return "you are paying $" + (income - (income * 0.396)) + " in tax";
     }
+  },
+
+
+
+  prefixNotation: function(operator, num1, num2, num3){
+
+  return eval((num1 + operator + num2 + operator + num3).toString());
+
   }
+
+
 };

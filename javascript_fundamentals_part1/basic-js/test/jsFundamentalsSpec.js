@@ -92,3 +92,13 @@ describe("#federalIncomeTaxCalculator", function(){
     expect(methods.federalIncomeTaxCalculator(1000000)).to.equal("you are paying $604000 in tax");
   });
 });
+
+
+describe("#prefixNotation", function(){
+  it("returns the answer", function(){
+    expect(methods.prefixNotation("*",9,3,3)).to.equal(81);
+  });
+  it("returns the answer", function(){
+    expect(methods.prefixNotation("/",900,3,100)).to.equal(3);
+  });
+});
