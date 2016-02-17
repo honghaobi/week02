@@ -36,7 +36,8 @@ module.exports = {
   },
 
   isVowel: function(letter){
-    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u'){
+    var vowels = ["a","e","i","o","u"];
+    if (vowels.indexOf(letter)!== -1){
       return true;
     } else {
       return false;
@@ -64,19 +65,19 @@ module.exports = {
   // Bonus
   federalIncomeTaxCalculator: function(income){
     if (income >= 1 && income <= 9225 ){
-      return "you are paying $" + (income - (income * 0.1)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.1));
     } else if (income >= 9226 && income <= 37450){
-      return "you are paying $" + (income - (income * 0.15)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.15));
     } else if (income >= 37451 && income <= 90750){
-      return "you are paying $" + (income - (income * 0.25)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.25));
     } else if (income >= 90751 && income <= 189300){
-      return "you are paying $" + (income - (income * 0.28)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.28));
     } else if (income >= 189301 && income <= 411500){
-      return "you are paying $" + (income - (income * 0.33)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.33));
     } else if (income >= 411501 && income <= 413200){
-      return "you are paying $" + (income - (income * 0.15)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.15));
     } else if (income >= 413200){
-      return "you are paying $" + (income - (income * 0.396)) + " in tax";
+      return "you are getting back $" + (income - (income * 0.396));
     }
   },
 

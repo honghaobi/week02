@@ -86,10 +86,10 @@ describe("#biggestOfThree", function(){
 
 describe("#federalIncomeTaxCalculator", function(){
   it("returns how much you are paying tax", function(){
-    expect(methods.federalIncomeTaxCalculator(86000)).to.equal("you are paying $64500 in tax");
+    expect(methods.federalIncomeTaxCalculator(86000)).to.equal("you are getting back $64500");
   });
   it("returns how much you are paying tax", function(){
-    expect(methods.federalIncomeTaxCalculator(1000000)).to.equal("you are paying $604000 in tax");
+    expect(methods.federalIncomeTaxCalculator(1000000)).to.equal("you are getting back $604000");
   });
 });
 
