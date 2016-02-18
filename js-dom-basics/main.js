@@ -24,3 +24,23 @@ console.log(firstOddElement);
 
 var main = document.querySelector('#main');
 console.log(main);
+
+var firstOddElement = document.querySelector('.odd');
+console.log(firstOddElement);
+
+var oddAndEvenElements = document.querySelectorAll('.odd, .even');
+console.log(oddAndEvenElements);
+
+for (var i = 0; i < allListItems.length; i++) {
+  console.log(allListItems[i].innerText);
+}
+
+for (var i = 0; i < allListItems.length; i++) {
+  console.log(allListItems[i].innerText = i);
+}
+console.log(allListItems);
+
+document.getElementById('main').style.backgroundColor = "goldenrod";
+
+var li = document.createElement('li');
+console.log(li);
