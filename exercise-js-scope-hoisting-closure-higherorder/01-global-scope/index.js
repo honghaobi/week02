@@ -5,4 +5,8 @@ function runner () {
   return outer;
 }
 
+var outer= "outer";
+
+runner();
+
 module.exports = runner;

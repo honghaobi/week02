@@ -6,9 +6,11 @@
 function runner () {
   var callbacks = [];
   for (var i=0; i<3; i++) {
-    callbacks.push(function () {
-      return i;
-    });
+    (function(x){
+      callbacks.push(function () {
+      return x;
+      });
+    })(i);
   }
   return callbacks;
 }

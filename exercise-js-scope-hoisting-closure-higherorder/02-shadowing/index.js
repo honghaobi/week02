@@ -2,10 +2,10 @@
 // Can you think of a way to hide your secret?
 // Make sure that the secret remains "butts"
 // and checkSecret checks against "secret"
-
-var secret = 'butts';
+var secret;
 
 function checkSecret () {
+  var secret = 'butts';
   if (secret === 'butts') {
     return true;
   } else {
@@ -13,7 +13,9 @@ function checkSecret () {
   }
 }
 
+
 function hackSecret () {
+  console.log(secret);
   if (secret === 'butts') {
     return 'hacked';
   } else {
@@ -21,7 +23,9 @@ function hackSecret () {
   }
 }
 
+
+
 module.exports = {
   checkSecret: checkSecret,
   hackSecret: hackSecret,
-}
+};

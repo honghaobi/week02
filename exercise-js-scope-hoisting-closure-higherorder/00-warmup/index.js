@@ -7,7 +7,7 @@ function runner () {
 }
 
 function changeBToWrong (b) {
-  a = 'wrong';
+  b = 'wrong';
   return b;
 }
 

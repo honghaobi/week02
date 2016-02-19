@@ -3,10 +3,9 @@
 // The function MUST remain async with setImmediate
 // And you must consume the value 1337 using a callback
 
-function doLater () {
-  setImmediate(function () {
-    return 1337;
-  })
+function doLater (setImmediate) {
+  setImmediate(1337);
 }
+
 
 module.exports = doLater;

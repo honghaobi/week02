@@ -4,6 +4,12 @@
 // You cannot use the built-in Array.map function
 
 function map (array, predicate) {
+  var result = [];
+
+    for (var i = 0; i < array.length; i++) {
+      result.push(predicate(array[i]));
+    }
+  return result;
 
 }
 

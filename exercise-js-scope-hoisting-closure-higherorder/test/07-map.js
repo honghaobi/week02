@@ -10,7 +10,7 @@ function removeVowels(s) {
   return s.replace(/[aeiou]/ig, '');
 }
 
-xdescribe('07-map', function () {
+describe('07-map', function () {
   it('Can map numbers', function () {
     expect(map([1,2,8], add2)).to.deep.equal([3,4,10]);
   });

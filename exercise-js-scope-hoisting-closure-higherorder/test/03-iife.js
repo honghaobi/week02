@@ -2,7 +2,7 @@ var chai = require('chai');
 var runner = require('../03-iife');
 var expect = chai.expect;
 
-xdescribe('03-iife', function () {
+describe('03-iife', function () {
   it('can retrieve i from a for loop', function () {
     var callbacks = runner();
     expect(callbacks[0]()).to.equal(0);

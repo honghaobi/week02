@@ -2,7 +2,7 @@ var chai = require('chai');
 var counter = require('../06-counter');
 var expect = chai.expect;
 
-xdescribe('06-counter', function () {
+describe('06-counter', function () {
   it('i can count', function () {
     var c = counter();
     expect(c()).to.equal(1);
