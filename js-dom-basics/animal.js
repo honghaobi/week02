@@ -6,13 +6,17 @@ var animal = {
   tiger: "raawr"
 };
 
+var tb = document.getElementById('animalTable');
+var row;
+var animalName;
+var animalSound;
 
-var tr = document.createElement('tr');
-var td = document.createElement('td');
-var animalName = td.innerText;
-
-for (var i = 0; i < 5; i++) {
-  animalName = animal[i];
-  console.log(animalName);
-
+for (var i = 0; i < 1; i++) {
+  for (var key in animal) {
+    row = tb.insertRow(i);
+    animalName = row.insertCell(0);
+    animalSound = row.insertCell(1);
+    animalName.innerHTML = key;
+    animalSound.innerHTML = animal[key];
+  }
 }
