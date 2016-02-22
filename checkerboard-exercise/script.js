@@ -63,6 +63,7 @@ var hue;
 var checkerbox;
 
 function flashingColor(){
+  removeElementsByClass();
   for (var i = 0; i < 63; i++) {
     checkerbox = document.createElement('div');
     hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
@@ -87,4 +88,3 @@ function removeElementsByClass(){
 
 
 setInterval(flashingColor, 2000);
-setInterval(removeElementsByClass, 1999.99999);
