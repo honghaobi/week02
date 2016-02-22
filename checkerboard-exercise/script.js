@@ -60,24 +60,31 @@ function gradientColor(){
 // gradientColor();
 
 var hue;
+var checkerbox;
 
 function flashingColor(){
   for (var i = 0; i < 63; i++) {
-    var checkerbox = document.createElement('div');
+    checkerbox = document.createElement('div');
     hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
     checkerbox.id = i;
+    checkerbox.className = "box";
     checkerbox.style.width = "11.1%";
     checkerbox.style.height = "100px";
     checkerbox.style.float = "left";
     checkerbox.style.backgroundColor = hue;
-
     body[0].appendChild(checkerbox);
   }
-  setInterval(colorChange);
 }
 
-function colorChange(){
-    hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+var element;
+
+function removeElementsByClass(){
+    var elements = document.getElementsByClassName('box');
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
 }
 
-flashingColor();
+
+setInterval(flashingColor, 2000);
+setInterval(removeElementsByClass, 1999.99999);
