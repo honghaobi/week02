@@ -1,5 +1,7 @@
 // Your JS goes here
 
+// to see each function please un-comment out the funciton call.
+
 var body = document.getElementsByTagName('body');
 
 
